@@ -5,6 +5,9 @@ const app = express(); // the object app now has the functionallity of express
 app.get('/',(req,res) =>{
     res.send('Hello skyler ');
 });
+app.get('/home',(req,res) =>{
+    res.send('homepage ');
+});
 
 const port = 3000
 
