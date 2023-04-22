@@ -1,13 +1,10 @@
 // express web server 
 const express = require('express'); // require is grabbing from node modules, it allows us to use express on this page
 const app = express(); // the object app now has the functionallity of express
+const controller = require('./routes/controllers');
 
-app.get('/',(req,res) =>{
-    res.send('Hello skyler ');
-});
-app.get('/home',(req,res) =>{
-    res.send('homepage ');
-});
+app.get('/', controller.index);
+app.get('/home', controller.homepage);
 
 const port = 3000
 
