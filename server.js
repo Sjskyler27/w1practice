@@ -3,9 +3,7 @@ const express = require('express'); // require is grabbing from node modules, it
 const app = express(); // the object app now has the functionallity of express
 const controller = require('./routes/controllers');
 
-app.get('/', controller.index);
-app.get('/home', controller.homepage);
-
+app.use('/', require('./routes/paths'));
 const port = 3000
 
 app.listen(port || process.env.port);
